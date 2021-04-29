@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormArray, FormGroup, FormBuilder, FormControlName, NgForm } from '@angular/forms'
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms'
 
 @Component({
   selector: 'app-forms',
@@ -26,11 +26,11 @@ export class FormsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  PostData(signUpForm: any) {
-    this.firstName=signUpForm.controls.firstName.value;
-    this.lastName=signUpForm.controls.lastName.value;
-    this.email=signUpForm.controls.email.value;
-    this.password=signUpForm.controls.password.value;
+  PostData() {
+    this.firstName = this.signUpForm.controls.firstName.value;
+    this.lastName = this.signUpForm.controls.lastName.value;
+    this.email = this.signUpForm.controls.email.value;
+    this.password = this.signUpForm.controls.password.value;
     console.log(this.firstName);
     console.log(this.lastName);
     console.log(this.email);
